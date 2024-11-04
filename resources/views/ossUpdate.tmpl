@@ -36,7 +36,7 @@ function uploadFile() {
     var ajax = new XMLHttpRequest();
     ajax.upload.addEventListener("progress", progressHandler, false);
     ajax.addEventListener("load", completeHandler, false);
-    ajax.open("POST", "{{ .url }}/oss/update");
+    ajax.open("POST", "{{ .url }}/api/oss/update");
     ajax.send(formData);
 }
 
