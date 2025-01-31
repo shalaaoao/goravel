@@ -35,5 +35,8 @@ func main() {
 		os.Exit(0)
 	}()
 
+	// crontab
+	go facades.Schedule().Run()
+
 	select {}
 }

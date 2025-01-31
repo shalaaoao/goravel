@@ -24,6 +24,7 @@ import (
 	"github.com/goravel/framework/translation"
 	"github.com/goravel/framework/validation"
 	"github.com/goravel/gin"
+	"github.com/goravel/redis"
 
 	"goravel/app/providers"
 )
@@ -113,6 +114,7 @@ func init() {
 			&providers.ValidationServiceProvider{},
 			&providers.DatabaseServiceProvider{},
 			&gin.ServiceProvider{},
+			&redis.ServiceProvider{},
 		},
 	})
 }
